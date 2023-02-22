@@ -1,6 +1,10 @@
 import logo from './logo.svg';
 import './App.css';
-import { Button } from '@mui/material';
+import Button from './components/Button'
+import Screen from './components/Screen'
+import Wrapper from './components/Wrapper'
+import ButtonBox from './components/ButtonBox'
+
 
 
 const btnValues=[
@@ -15,7 +19,6 @@ const btnValues=[
 
 function App() {
   return (
-    <CalcProvider>
       <Wrapper>
         <Screen/>
         <ButtonBox>
@@ -27,7 +30,7 @@ function App() {
           ))}
         </ButtonBox>
       </Wrapper>
-    </CalcProvider>
+   
   );
 }
 

@@ -1,12 +1,15 @@
 const express= require("express");
 const mongoose = require("mongoose");
 const dotenv= require("dotenv");
-
 const app= express();
 //it creates a session 
 const session = require('express-session');
 const MongoStore= require("connect-mongo")
 const initializePassport = require('./config/passport-config')
+const passport = require('passport');
+const authRouter = require('./routes/authRoutes')
+
+initializePassport(passport);
 dotenv.config();
 //json middleware
 app.use(express.json())
@@ -30,6 +33,11 @@ app.use(session({
     }
 
 }))
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use('/users',authRouter)
 
 app.get('/', (req,res)=>{
     if(req.session.viewCount) req.session.viewCount++;

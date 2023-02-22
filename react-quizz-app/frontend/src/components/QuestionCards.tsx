@@ -1,6 +1,6 @@
 import React from "react";
 //types
-import { userAnswersType } from "../App";
+import { userAnswersType } from "../Quiz";
 type QCProps = {
   question: string;
   answers: string[];
