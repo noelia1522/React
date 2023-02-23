@@ -1,0 +1,23 @@
+.fixed-header{
+    position:fixed;
+    left: 0;
+    top: 0;
+    width:100%;
+    background-color: #1976d2;
+    color: white;
+    margin-top: 0;
+    list-style-type: none;
+  }
+  
+  .litem a{
+    color: white;
+    text-decoration: none;
+    padding: 20px;
+    float: left;
+    display: block;
+  
+  }
+  .litem a.active{
+    background-color: #5795d2;
+  }
+  

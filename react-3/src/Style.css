@@ -1,0 +1,58 @@
+.aClass{
+    width : 50%;
+    height: 200px;
+    margin: auto;
+}
+.aHeader {
+    background-color: darkmagenta;
+    font-size: 24px;
+    font-weight: 500;
+    color: aliceblue;
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    height: 20%;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.aBody {
+    background-color: lavender;
+    font-size: 16px;
+    font-weight: 300;
+    color:darkmagenta;
+    text-align: left;
+    padding: 20px;
+    height: 80%;
+    box-sizing: border-box;
+}
+
+.title{
+ padding-left: 20px;
+}
+
+.symbol{
+    padding-right: 20px;
+}
+
+.joke{
+    background-color: aliceblue;
+    border-style: none;
+    border-radius: 6px;
+    width: 40%;
+    text-align: center;
+    margin: 1%;
+    padding: 2%;
+    box-shadow: 10%;
+    
+}
+
+.jokeContainer{
+    background-color: aquamarine;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:nowrap;
+    justify-content: space-around;
+    width: 95%;
+    padding: 20px;
+}
