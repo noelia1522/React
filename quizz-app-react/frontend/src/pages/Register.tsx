@@ -12,6 +12,7 @@ export default function Register() {
   const generalContext = useLoader();
 
   function submitHandler(event: React.MouseEvent<HTMLButtonElement>) {
+    console.log("button clicked")
     event.preventDefault();
     const requestOption = {
       method: "POST",
@@ -20,6 +21,7 @@ export default function Register() {
     };
     fetch("users/register", requestOption)
       .then((response) => {
+        console.log(response)
         if (response.status === 200) navigate("/quiz", { replace: true });
         return response.json();
       })

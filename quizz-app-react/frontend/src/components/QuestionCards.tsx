@@ -19,12 +19,12 @@ const QuestionCard: React.FC<QCProps> = ({
   userAnswer,
 }) => {
   return (
-    <div>
+    <div className="card-container">
       <p className="number">
         Question: {questionNumber}/ {totalQuestions}
       </p>
       <p className="question">{question}:</p>
-      <div>
+      <div className="answers-container">
         {answers.map((answer) => (
           <div key={answer}>
             <button

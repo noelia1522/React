@@ -92,6 +92,7 @@ function Quiz() {
             maxHeight: "40px",
             padding: "10px 0",
             margin: "10px",
+            textAlign:"center"
           }}
         >
           Start Quiz!
@@ -136,6 +137,7 @@ function Quiz() {
           maxHeight: "40px",
           padding: "10px 0",
           margin: "10px",
+          textAlign:"center"
         }}
       >
         Logout

@@ -1,0 +1,7 @@
+.card-container{
+    display: grid;
+    grid-template-rows: 20% 80%;
+    row-gap: 30px;
+    padding: 0 30px;
+  
+  }

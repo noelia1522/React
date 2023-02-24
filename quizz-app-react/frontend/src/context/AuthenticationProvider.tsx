@@ -27,8 +27,10 @@ export default function AuthenticationProvider({ children }: PropsType) {
         },
       });
       try {
+        console.log("in the try block")
         if (response.ok) {
           const data = await response.json();
+          console.log(data)
           onLogin(data);
           loadingResult?.setIsLoading(false);
           return data;
@@ -44,6 +46,7 @@ export default function AuthenticationProvider({ children }: PropsType) {
     };
     getLoggedInUser();
   }, [loadingResult]);
+  
   const onLogin = (value: {}) => setAuthData(value);
   const onLogout = () => setAuthData(undefined);
   return (
