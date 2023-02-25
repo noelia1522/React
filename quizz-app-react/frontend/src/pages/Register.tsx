@@ -32,8 +32,8 @@ export default function Register() {
 
   return (
     <form className="form-control">
-      <h1 style={{ textAlign: "center", marginTop: "50px" }}>Register</h1>
-      <div  style={{textAlign:"center"}}>
+      <h1 style={{ textAlign: "center" }}>Register</h1>
+     
       <label>
         Name
         <input
@@ -62,7 +62,7 @@ export default function Register() {
       <Button variant="contained" onClick={submitHandler} >
         Sign up!
       </Button>
-      </div>
+  
     </form>
   );
 }

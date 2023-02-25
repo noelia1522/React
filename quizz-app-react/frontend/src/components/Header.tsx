@@ -23,6 +23,10 @@ export default function Header() {
             <NavLink className={({ isActive }) => (isActive ? "active" : "")}
             to="/quiz">Quiz</NavLink>
           </li>
+          <li className="litem">
+            <NavLink className={({ isActive }) => (isActive ? "active" : "")}
+            to="/profile">Profile</NavLink>
+          </li>
         </ul>
       </nav>
     </header>

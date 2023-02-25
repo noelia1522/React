@@ -35,8 +35,8 @@ export default function Login() {
   return (
     <>
       <form className="form-control">
-        <h1 style={{ textAlign: "center" , marginTop: "50px" }}>Login</h1>
-        <div style={{textAlign:"center"}}>
+        <h1 style={{ textAlign: "center" }}>Login</h1>
+        
         <label>
           Email
           <input
@@ -56,7 +56,7 @@ export default function Login() {
         <Button variant="contained" onClick={submitHandler}>
           Login
         </Button>
-        </div>
+       
       </form>
     </>
   );

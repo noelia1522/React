@@ -41,12 +41,12 @@ app.use(passport.session());
 app.use("/users", authRouter);
 app.use(errorHandler);
 
-app.get("/", (req, res) => {
-  if (req.session.viewCount) req.session.viewCount++;
-  else req.session.viewCount = 1;
-  res.json({ message: "home page" });
-  console.log(req.session);
-});
+//app.get("/", (req, res) => {
+ // if (req.session.viewCount) req.session.viewCount++;
+ // else req.session.viewCount = 1;
+ // res.json({ message: "home page" });
+ // console.log(req.session);
+//});
 
 //to connect to the database
 const port = process.env.PORT || 4000;
@@ -63,7 +63,7 @@ mongoose
     });
   })
 
-  .catch((err) => {
+  .catch((err) => { 
     console.log("Database connection error!");
     console.log(err);
   });

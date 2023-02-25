@@ -1,0 +1,33 @@
+.pic-container{
+    display:grid;
+    justify-self:center;
+    justify-items:center;
+    margin-top: 40px;
+    width:200px;
+    height: 200px;
+    border-radius:50%;
+    overflow:hidden;
+    border: 1px solid grey;
+}
+
+#photo{
+    width:200px;
+    height:200px;
+}
+
+#file{
+    display:none;
+}
+
+#upload-button{
+    width:200px;
+    height:50px;
+    text-align:center;
+    position:fixed;
+    top:330px;
+    color: black;
+    line-height: 35px;
+    position: fixed;
+    top: 415px;
+
+}

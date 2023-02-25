@@ -3,11 +3,13 @@ import Quiz from "./pages/Quiz"
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Register from "./pages/Register";
 import Login from "./pages/Login";
+import Profile from "./pages/Profile"
 import Header from "./components/Header";
 import AuthenticationProvider from "./context/AuthenticationProvider";
 import RequiredAuth from "./RequiredAuth";
 import Alert from "@mui/material/Alert";
 import { useLoader } from "./context/LoadContext";
+
 
 export default function App() {
   const generalContext = useLoader();
@@ -43,13 +45,14 @@ export default function App() {
             />
             <Route path="/login" element={<Login />} />
             <Route path="/register" element={<Register />} />
+            <Route path="/profile" element={<Profile />} />
           </Routes>
         </Router>
       )}
     </AuthenticationProvider>
-    {generalContext?.error && (
+   {/* {generalContext?.error && (
       <Alert severity="error">{generalContext?.error}</Alert>
-    )}
+    )}*/}
   </div>
 );
 }

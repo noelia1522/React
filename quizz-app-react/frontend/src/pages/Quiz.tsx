@@ -6,6 +6,7 @@ import { Difficulty, QuestionState } from "../API";
 import { useNavigate } from "react-router-dom";
 import Button from "@mui/material/Button";
 import "./Quiz.css";
+import { useAuthentication } from "../context/AuthenticationProvider";
 
 export type userAnswersType = {
   question: string;
@@ -23,6 +24,7 @@ function Quiz() {
   const [gameOver, setGameOver] = useState(true);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const authContext= useAuthentication();
 
   console.log(fetchQuizQuestions(TOTAL_QUESTIONS, Difficulty.EASY));
 
@@ -75,6 +77,8 @@ function Quiz() {
         response.json();
       })
       .then((data) => {
+        console.log(data);
+        authContext.onLogout();
         navigate("/login", { replace: true });
       });
   };
